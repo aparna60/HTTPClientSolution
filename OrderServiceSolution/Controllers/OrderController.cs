@@ -15,7 +15,8 @@ namespace OrderServiceSolution.Controllers
         public async Task<IActionResult> Index()
         {
           var results= await _httpClient.GetFromJsonAsync<IEnumerable<Product>>("http://localhost:5125/api/product");
-            return Ok(results);
+          return Ok(results);
+           
         }
     }
 }
