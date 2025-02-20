@@ -15,6 +15,7 @@ namespace ProductService.Controllers
 
         public async Task<IActionResult> GetProducts()
         {
+            //Task.Delay(10000);
             var results= await _productData.GetProducts();
             return Ok(results);
         }

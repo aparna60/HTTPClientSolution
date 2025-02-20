@@ -3,7 +3,7 @@ using Polly.Extensions.Http;
 
 var retryPolicy= HttpPolicyExtensions
     .HandleTransientHttpError()
-    .WaitAndRetryAsync(3, retryAttempt=> TimeSpan.FromSeconds(Math.Pow(2, retryAttempt));
+    .WaitAndRetryAsync(3, retryAttempt=> TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)));
 
 var circuitBreakerPolicy = HttpPolicyExtensions
     .HandleTransientHttpError()
